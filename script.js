@@ -1,7 +1,6 @@
 const sketchPad = document.querySelector("#sketch-container");
 createGrid(16);
 
-
 function createGrid(size) {
     sketchPad.innerHTML = "";
     for (let i = 0; i < size; i++) {
@@ -32,3 +31,20 @@ function createPixel() {
 function createRandomColor() {
     return Math.floor(Math.random() * 256);
 }
+
+
+const sizeInputButton = document.querySelector("#size-input-button");
+sizeInputButton.addEventListener("click", function() {
+    let size = prompt("Pick a size for the grid!");
+    let isValid = false;
+    
+    while (!isValid) {
+        if (size !== null && size >= 1 && size <= 100) {
+        isValid = true;
+        } else {
+        size = prompt("Invalid input! Enter a value between 1 and 100");
+        }
+    }
+
+    createGrid(size);
+});
