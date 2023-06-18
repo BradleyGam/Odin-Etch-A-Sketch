@@ -11,3 +11,5 @@ Adjustable grid size.
 HTML
 CSS
 JavaScript
+
+You can view the live demo here: https://bradleygam.github.io/odin-etch-a-sketch
